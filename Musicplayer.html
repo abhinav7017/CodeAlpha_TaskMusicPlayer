@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="music-player">
+        <div class="player-header">
+            <div class="now-playing">
+                <img id="cover" src="https://placehold.co/400x400/1a1b1f/ffffff?text=Cover" alt="Album cover" class="cover-art">
+                <div class="track-info">
+                    <h2 id="title">No Track Selected</h2>
+                    <p id="artist">Unknown Artist</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-area">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="time-counter">
+                <span id="current-time">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="prev" class="control-btn">
+                <i class="fas fa-backward"></i>
+            </button>
+            <button id="play-pause" class="control-btn">
+                <i class="fas fa-play"></i>
+            </button>
+            <button id="next" class="control-btn">
+                <i class="fas fa-forward"></i>
+            </button>
+            <div class="volume-container">
+                <button id="volume-btn" class="control-btn">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                <div class="volume-slider">
+                    <div class="volume-progress"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="playlist">
+            <h3>Playlist <span id="autoplay" class="autoplay-toggle" title="Toggle autoplay">
+                <i class="fas fa-infinity"></i>
+            </span></h3>
+            <ul id="playlist-songs">
+                <!-- Demo songs - replace with your actual songs -->
+                <li class="playlist-song" data-src="song1.mp3">
+                    <div class="song-info">
+                        <span class="song-title">Sunflower</span>
+                        <span class="song-artist">Post Malone</span>
+                    </div>
+                    <span class="song-duration">3:42</span>
+                </li>
+                <li class="playlist-song" data-src="song2.mp3">
+                    <div class="song-info">
+                        <span class="song-title">Blinding Lights</span>
+                        <span class="song-artist">The Weeknd</span>
+                    </div>
+                    <span class="song-duration">3:20</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
